@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/whiteBackG"
+    tools:context=".MainActivity2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/imgHome"
+            android:background="@color/textBlueFon"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="180dp"/>
+
+        <ImageView
+            android:id="@+id/img2TwoCenter"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/photo3"
+            app:layout_constraintStart_toStartOf="@+id/imgHome"
+            app:layout_constraintTop_toTopOf="@+id/imgHome" />
+
+        <TextView
+            android:id="@+id/text2Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:text="Dr. Oleg Mayami"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/img2TwoCenter"
+            app:layout_constraintTop_toTopOf="@+id/imgHome" />
+
+        <TextView
+            android:id="@+id/text2Title2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Dental surgeon"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/img2TwoCenter"
+            app:layout_constraintTop_toBottomOf="@+id/text2Title" />
+
+
+        <ImageView
+            android:id="@+id/img2zuby"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/zuby"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgHome" />
+
+        <ImageView
+            android:id="@+id/img2dental"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/dental"
+            app:layout_constraintStart_toEndOf="@id/img2zuby"
+            app:layout_constraintTop_toBottomOf="@id/imgHome" />
+
+        <TextView
+            android:textColor="@color/text"
+            android:id="@+id/txtdesDental"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Youe friendly Dental Friend"
+            app:layout_constraintStart_toEndOf="@id/img2zuby"
+            app:layout_constraintTop_toBottomOf="@id/img2dental" />
+
+        <androidx.constraintlayout.widget.Barrier
+            app:barrierDirection="bottom"
+            android:id="@+id/barrier"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:constraint_referenced_ids="img2zuby, img2dental,txtdesDental "/>
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow"
+            android:layout_marginTop="20dp"
+            android:background="@color/whiteBackG"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="liner1, liner2, liner3,liner4, liner5, liner6"
+            app:layout_constraintTop_toBottomOf="@id/barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:flow_wrapMode="chain"
+            app:flow_maxElementsWrap="3"
+            app:layout_constraintHorizontal_bias="0"
+            app:flow_horizontalGap="8dp"
+            app:flow_verticalGap="8dp"
+            app:flow_horizontalStyle="spread"
+            app:flow_verticalStyle="spread"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/liner1"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/tell"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/text"
+                    android:layout_gravity="center"
+                    android:text="To call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/liner2"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/whatsapp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/text"
+                    android:layout_gravity="center"
+                    android:text="WhatsApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/liner3"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/mail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/text"
+                    android:layout_gravity="center"
+                    android:text="Email us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/liner4"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/site"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/text"
+                    android:layout_gravity="center"
+                    android:text="Visit website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/liner5"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/telegramm"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/text"
+                    android:layout_gravity="center"
+                    android:text="Telegram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/liner6"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/contack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/text"
+                    android:layout_gravity="center"
+                    android:text="Save contack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:id="@+id/txtLocation"
+            android:text="Our Location"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textBlueFon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/flow"
+            />
+        <TextView
+            android:id="@+id/txtAsiaMall"
+            android:text="Shopping center Asia Mall"
+            android:textColor="@color/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLocation"/>
+        <TextView
+            android:id="@+id/txtfloor"
+            android:text="1 st floor"
+            android:textColor="@color/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtAsiaMall"/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/txtfloor">
+            <TextView
+                android:text="Open Map"
+                android:textColor="@color/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <View
+                android:background="@color/design_default_color_error"
+                android:layout_width="65dp"
+                android:layout_height="3dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>
